@@ -1,4 +1,4 @@
-// All page copy in one place. Bracketed values are placeholders until real ones exist.
+// All page copy in one place. Meridian is fictional, and so is every name, bank and quote here.
 
 export const NAV_LINKS = [
   { label: "Card", href: "#anatomy" },
@@ -7,7 +7,7 @@ export const NAV_LINKS = [
   { label: "Pricing", href: "#cta" },
 ];
 
-export const PARTNER_LINE = "Banking services by [PARTNER BANK], Member FDIC";
+export const PARTNER_LINE = "Banking services by Meridian Bank, Member FDIC";
 
 export const HERO = {
   eyebrow: "The titanium card + live ledger",
@@ -133,25 +133,33 @@ export const MARQUEE = [
 ] as const;
 
 export const QUOTES = [
-  { text: "We closed the books in a day instead of a week.", lime: false },
+  {
+    text: "We closed the books in a day instead of a week.",
+    by: "Priya Raman · Head of Finance, Halcyon",
+    lime: false,
+  },
   {
     text: "Every card has its own limit and its own end date. Finance stopped chasing receipts entirely.",
+    by: "Tomás Ferreira · Controller, Fieldnote",
     lime: false,
   },
   {
     text: "Paying a team in five countries now takes one tap, and nobody loses money to the exchange rate.",
+    by: "Ada Okafor · COO, Parallel",
     lime: true,
   },
-  { text: "It is the first finance tool our engineers actually open on purpose.", lime: false },
+  {
+    text: "It is the first finance tool our engineers actually open on purpose.",
+    by: "Jonas Lindqvist · CTO, Orbital",
+    lime: false,
+  },
 ];
-
-export const QUOTE_CAPTION = "[NAME] · [ROLE], [COMPANY]";
 
 export const CTA = {
   eyebrow: "[ 08 ] Get started",
   line1: "Your money,",
   line2: ["finally", "moving."],
-  body: "Apply in a few minutes. Your virtual card works the moment you are approved; the titanium one ships within [X] days.",
+  body: "Apply in a few minutes. Your virtual card works the moment you are approved; the titanium one ships within 5 business days.",
 };
 
 export const FOOTER_COLUMNS = [

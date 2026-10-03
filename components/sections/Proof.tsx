@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { MARQUEE, QUOTES, QUOTE_CAPTION } from "@/lib/content";
+import { MARQUEE, QUOTES } from "@/lib/content";
 import { MEDIA, ScrollTrigger, gsap, useGSAP } from "@/lib/gsap";
 import { getScrollVelocity } from "@/lib/smooth-scroll";
 
@@ -98,9 +98,7 @@ export function Proof() {
               }`}
             >
               <blockquote className="text-lg leading-[1.4] tracking-[-0.02em] lg:text-[22px]">{q.text}</blockquote>
-              <figcaption className={`font-mono text-xs ${q.lime ? "text-[#2A3008]" : "text-fog"}`}>
-                {QUOTE_CAPTION}
-              </figcaption>
+              <figcaption className={`font-mono text-xs ${q.lime ? "text-[#2A3008]" : "text-fog"}`}>{q.by}</figcaption>
             </figure>
           ))}
         </div>

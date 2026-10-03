@@ -39,7 +39,7 @@ function FooterLinks({ prefix }: { prefix: string }) {
 function Legal() {
   return (
     <>
-      <span>© 2026 Meridian (a concept)</span>
+      <span>© 2026 Meridian</span>
       <span>{PARTNER_LINE}</span>
     </>
   );

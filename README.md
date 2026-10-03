@@ -4,7 +4,7 @@ A landing page for **Meridian**, a fictional fintech product: one titanium card 
 
 This is a concept project built to explore scroll choreography. The page tells its story through a single object, the card, which travels from the hero to the footer while each section is driven by scroll.
 
-> Meridian is not a real company. All names, figures and testimonials on the page are placeholders.
+> Meridian is not a real company. All names, banks, figures and testimonials on the page are made up.
 
 ## Status
 

@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Meridian | Money that moves at the speed of intent",
   description:
-    "One titanium card, one live ledger, every currency. A concept landing page for Meridian, a fictional fintech.",
+    "One titanium card, one live ledger, every currency. Meridian settles, sorts and reconciles your money the moment it moves.",
 };
 
 export const viewport: Viewport = {
