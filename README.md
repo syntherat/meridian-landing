@@ -2,13 +2,15 @@
 
 A landing page for **Meridian**, a fictional fintech product: one titanium card and a live ledger that settles, sorts and reconciles your money the moment it moves.
 
+**Live site: [meridian.sounakpal.dev](https://meridian.sounakpal.dev)**
+
 This is a concept project built to explore scroll choreography. The page tells its story through a single object, the card, which travels from the hero to the footer while each section is driven by scroll.
 
 > Meridian is not a real company. All names, banks, figures and testimonials on the page are made up.
 
 ## Status
 
-Version 1 is built: all eight sections run on desktop, with a simplified layout for phones and a calm, non-animated version for anyone who prefers reduced motion.
+Version 1 is live at [meridian.sounakpal.dev](https://meridian.sounakpal.dev). All eight sections run on desktop, with a simplified layout for phones and a calm, non-animated version for anyone who prefers reduced motion.
 
 ## Tech stack
 
