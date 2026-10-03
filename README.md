@@ -8,7 +8,7 @@ This is a concept project built to explore scroll choreography. The page tells i
 
 ## Status
 
-Work in progress. The design and motion are finished; the build is underway.
+Version 1 is built: all eight sections run on desktop, with a simplified layout for phones and a calm, non-animated version for anyone who prefers reduced motion.
 
 ## Tech stack
 
@@ -42,7 +42,20 @@ Work in progress. The design and motion are finished; the build is underway.
 
 ## Getting started
 
-Setup instructions will be added once the app is scaffolded.
+Requires Node.js 20.9 or newer.
+
+```bash
+npm install
+npm run dev
+```
+
+Then open [http://localhost:3000](http://localhost:3000). The full scroll choreography runs at widths of 1024px and up.
+
+Other scripts:
+
+- `npm run build` builds for production
+- `npm run start` serves the production build
+- `npm run lint` runs ESLint
 
 ## License
 

@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@theme {
+  --color-void: #07080a;
+  --color-graphite: #0e1013;
+  --color-steel: #1a1d22;
+  --color-fog: #8a8f98;
+  --color-body: #9da2aa;
+  --color-dim: #6f747d;
+  --color-bone: #edeef0;
+  --color-signal: #c6f432;
+  --color-hairline: rgb(255 255 255 / 0.08);
+
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+:root {
+  --s: 1;
+  color-scheme: dark;
+}
+
+html {
+  background: var(--color-void);
+  color: var(--color-bone);
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--color-signal);
+  color: var(--color-void);
+}
+
+/* Desktop beats are laid out on a fixed 1440x900 board and scaled to fit the viewport. */
+.stage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1440px;
+  height: 900px;
+  transform: translate(-50%, -50%) scale(var(--s));
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-fog);
+}
+
+.glass {
+  background: rgb(20 22 26 / 0.72);
+  border: 1px solid rgb(255 255 255 / 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.outline-text {
+  color: transparent;
+  -webkit-text-stroke: 1px rgb(237 238 240 / 0.35);
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Anatomy list: open the active layer's description without animating height. */
+.layer-desc {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition:
+    grid-template-rows 0.5s cubic-bezier(0.65, 0, 0.35, 1),
+    opacity 0.4s;
+}
+
+.is-active > div > .layer-desc {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.a-plate {
+  border-color: rgb(255 255 255 / 0.14);
+}
+
+.a-plate.is-lit {
+  border-color: var(--color-signal);
+  box-shadow: 0 0 60px rgb(198 244 50 / 0.25);
+}
+
+/*
+  .desk is the pinned, scaled board; .mob is the flowing layout.
+  Reduced motion gets the flowing layout at every width, so nothing pins or scrubs.
+  Keep these queries in sync with MEDIA in lib/gsap.ts.
+*/
+.desk {
+  display: none;
+}
+
+@media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+  .desk {
+    display: block;
+  }
+
+  .mob {
+    display: none;
+  }
+
+  .beat {
+    height: 100svh;
+  }
+}
+
+/* Room for descenders inside SplitText line masks. */
+.c-line-mask {
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
+}
